@@ -1,6 +1,6 @@
 {
   "name": "graff-itvisual-worksapce",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "publish": "ng build --prod & npm publish ./dist/ngx-git-visual",
-
     "preversion": "cd ./projects/ngx-git-visual & npm version patch",
     "version": "npm run build & git add -A dist -f",
     "postversion": "git push & git push --tags"
