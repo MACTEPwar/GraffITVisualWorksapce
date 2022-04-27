@@ -1,10 +1,10 @@
 {
   "name": "ngx-git-visual",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "graffit",
   "repository": {
-    "type":"git",
-    "url":"https://github.com/MACTEPwar/GraffITVisualWorksapce.git"
+    "type": "git",
+    "url": "https://github.com/MACTEPwar/GraffITVisualWorksapce.git"
   },
   "bugs": {
     "url": "https://github.com/MACTEPwar/GraffITVisualWorksapce/issues"
