@@ -7,9 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "publish:major": "npm version major & ng build --prod & npm publish ./dist/ngx-git-visual",
-    "publish:minor": "npm version minor & ng build --prod & npm publish ./dist/ngx-git-visual",
-    "publish:patch": "npm version patch & ng build --prod & npm publish ./dist/ngx-git-visual"
+    "publish:major": "cd .\\dist\ngx-git-visual & npm version major & ng build --prod & npm publish ./dist/ngx-git-visual",
+    "publish:minor": "cd .\\dist\ngx-git-visual & npm version minor & ng build --prod & npm publish ./dist/ngx-git-visual",
+    "publish:patch": "cd .\\dist\ngx-git-visual & npm version patch & ng build --prod & npm publish ./dist/ngx-git-visual"
   },
   "private": true,
   "dependencies": {
