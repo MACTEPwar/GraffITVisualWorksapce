@@ -1,6 +1,6 @@
 {
   "name": "graff-itvisual-worksapce",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,9 +10,9 @@
     "publish:major": "cd .\\dist\\ngx-git-visual & npm version major & ng build --prod & npm publish ./dist/ngx-git-visual",
     "publish:minor": "cd .\\dist\\ngx-git-visual & npm version minor & ng build --prod & npm publish ./dist/ngx-git-visual",
     "publish:patch": "cd .\\dist\\ngx-git-visual & npm version patch & ng build --prod & npm publish ./dist/ngx-git-visual",
-    "preversion":"cd ./projects/ngx-git-visual & npm version patch",
-    "version": "npm run build && git add -A dist",
-    "postversion": "git push && git push --tags"
+    "preversion": "cd ./projects/ngx-git-visual & npm version patch",
+    "version": "npm run build & git add -A dist",
+    "postversion": "git push & git push --tags"
   },
   "private": true,
   "dependencies": {

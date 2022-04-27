@@ -23,5 +23,12 @@
   },
   "dependencies": {
     "tslib": "^2.2.0"
-  }
+  },
+  "main": "bundles/ngx-git-visual.umd.js",
+  "module": "fesm2015/ngx-git-visual.js",
+  "es2015": "fesm2015/ngx-git-visual.js",
+  "esm2015": "esm2015/ngx-git-visual.js",
+  "fesm2015": "fesm2015/ngx-git-visual.js",
+  "typings": "ngx-git-visual.d.ts",
+  "sideEffects": false
 }
