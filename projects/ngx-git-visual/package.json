@@ -1,0 +1,13 @@
+{
+  "name": "ngx-git-visual",
+  "version": "0.0.1",
+  "author": "graffit",
+  "description": "A visual library",
+  "peerDependencies": {
+    "@angular/common": "^12.1.0",
+    "@angular/core": "^12.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.2.0"
+  }
+}

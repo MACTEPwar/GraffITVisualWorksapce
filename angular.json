@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "NgxGitVisual": {
+      "projectType": "library",
+      "root": "projects/ngx-git-visual",
+      "sourceRoot": "projects/ngx-git-visual/src",
+      "prefix": "NgxGit",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-git-visual/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-git-visual/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-git-visual/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-git-visual/src/test.ts",
+            "tsConfig": "projects/ngx-git-visual/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-git-visual/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "NgxGitVisual"
 }
