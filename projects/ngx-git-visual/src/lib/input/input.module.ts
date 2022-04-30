@@ -9,4 +9,4 @@ import { InputTextModule } from 'primeng/inputtext';
   imports: [CommonModule, FormsModule, ReactiveFormsModule, InputTextModule],
   exports: [InputComponent],
 })
-export class AlInputModule {}
+export class InputModule {}
