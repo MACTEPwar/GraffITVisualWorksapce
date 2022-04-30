@@ -34,7 +34,7 @@
         }
       }
     },
-    "grapffit-kit": {
+    "graffit-kit": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -44,25 +44,25 @@
           "strict": true
         }
       },
-      "root": "projects/grapffit-kit",
-      "sourceRoot": "projects/grapffit-kit/src",
+      "root": "projects/graffit-kit",
+      "sourceRoot": "projects/graffit-kit/src",
       "prefix": "gkit",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/grapffit-kit",
-            "index": "projects/grapffit-kit/src/index.html",
-            "main": "projects/grapffit-kit/src/main.ts",
-            "polyfills": "projects/grapffit-kit/src/polyfills.ts",
-            "tsConfig": "projects/grapffit-kit/tsconfig.app.json",
+            "outputPath": "dist/graffit-kit",
+            "index": "projects/graffit-kit/src/index.html",
+            "main": "projects/graffit-kit/src/main.ts",
+            "polyfills": "projects/graffit-kit/src/polyfills.ts",
+            "tsConfig": "projects/graffit-kit/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/grapffit-kit/src/favicon.ico",
-              "projects/grapffit-kit/src/assets"
+              "projects/graffit-kit/src/favicon.ico",
+              "projects/graffit-kit/src/assets"
             ],
             "styles": [
-              "projects/grapffit-kit/src/styles.scss"
+              "projects/graffit-kit/src/styles.scss"
             ],
             "scripts": []
           },
@@ -82,8 +82,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "projects/grapffit-kit/src/environments/environment.ts",
-                  "with": "projects/grapffit-kit/src/environments/environment.prod.ts"
+                  "replace": "projects/graffit-kit/src/environments/environment.ts",
+                  "with": "projects/graffit-kit/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -103,10 +103,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "grapffit-kit:build:production"
+              "browserTarget": "graffit-kit:build:production"
             },
             "development": {
-              "browserTarget": "grapffit-kit:build:development"
+              "browserTarget": "graffit-kit:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -114,23 +114,27 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "grapffit-kit:build"
+            "browserTarget": "graffit-kit:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/grapffit-kit/src/test.ts",
-            "polyfills": "projects/grapffit-kit/src/polyfills.ts",
-            "tsConfig": "projects/grapffit-kit/tsconfig.spec.json",
-            "karmaConfig": "projects/grapffit-kit/karma.conf.js",
+            "main": "projects/graffit-kit/src/test.ts",
+            "polyfills": "projects/graffit-kit/src/polyfills.ts",
+            "tsConfig": "projects/graffit-kit/tsconfig.spec.json",
+            "karmaConfig": "projects/graffit-kit/karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/grapffit-kit/src/favicon.ico",
-              "projects/grapffit-kit/src/assets"
+              "projects/graffit-kit/src/favicon.ico",
+              "projects/graffit-kit/src/assets"
             ],
-            "styles": [
-              "projects/grapffit-kit/src/styles.scss"
+            "styles": [              
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/primeng.min.css",
+
+              "projects/graffit-kit/src/styles.scss"
             ],
             "scripts": []
           }
@@ -138,5 +142,5 @@
       }
     }
   },
-  "defaultProject": "grapffit-kit"
+  "defaultProject": "graffit-kit"
 }

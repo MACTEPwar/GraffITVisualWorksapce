@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, '../../coverage/grapffit-kit'),
+      dir: require('path').join(__dirname, '../../coverage/graffit-kit'),
       subdir: '.',
       reporters: [
         { type: 'html' },
