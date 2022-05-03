@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "ng build --project=NgxGitVisual --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "preversion": "cd ./projects/ngx-git-visual & npm version patch",

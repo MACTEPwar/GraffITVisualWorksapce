@@ -14,6 +14,7 @@ import { BaseUiFormDirective } from '../base-classes/a-base-component';
 @Component({
   selector: 'ngx-git-input',
   templateUrl: './input.component.html',
+  styleUrls: ['./input.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
