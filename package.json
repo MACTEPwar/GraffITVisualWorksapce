@@ -3,7 +3,7 @@
   "version": "0.0.9",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run build:lib & ng serve",
     "build": "ng build",
     "build:lib": "ng build --project=NgxGitVisual --prod",
     "watch": "ng build --watch --configuration development",

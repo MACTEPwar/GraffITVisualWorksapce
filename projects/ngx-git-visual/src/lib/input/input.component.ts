@@ -27,13 +27,12 @@ export class InputComponent
   extends BaseUiFormDirective
   implements OnInit, ControlValueAccessor
 {
+  test: HTMLInputElement | null = null;
+
   @Input() public type: string = 'text';
-  @Input() public maxWidth = false;
-  // TODO: реализовать верно в html
   @Input() public pattern: string | null = null;
   @Input() public min = 0;
   @Input() public max: number | null = null;
-  @Input() public labelTextPosition: 'left' | 'right' | 'none' = 'left';
   @Input() public labelPosition: 'top' | 'left' | 'none' = 'top';
 
   // TODO: сделать!!!

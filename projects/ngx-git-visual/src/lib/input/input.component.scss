@@ -1,6 +1,33 @@
-@import "../../../styles/variables";
-
-input {
-    color: $color;
+:host {
+  width: 100%;
 }
 
+.p-grid {
+  padding: 4px 8px;
+}
+
+.form-control {
+  color: var(--form-control_color);
+  .label {
+    font-size: var(--form-control-label__font-size);
+    color: var(--form-control-label__color);
+  }
+  .input {
+    border: var(--form-control_border);
+    padding: var(--form-control-input__padding);
+    font-size: var(--form-control-input__font-size);
+    box-sizing: border-box;
+    border-radius: var(--form-control_border-radius);
+    height: var(--form-control_height);
+    width: 100%;
+    color: var(--form-control-input__color);
+    &:hover {
+      border: 1px solid #484848;
+      outline: none;
+    }
+    &:focus-visible {
+      border: 1px solid #484848;
+      outline: none;
+    }
+  }
+}

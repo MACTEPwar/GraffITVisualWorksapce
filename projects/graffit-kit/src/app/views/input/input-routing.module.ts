@@ -1,4 +1,4 @@
-import { InputComponent } from './../../../../../ngx-git-visual/src/lib/input/input.component';
+import { InputComponent } from './input.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 

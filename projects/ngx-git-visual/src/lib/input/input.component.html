@@ -1,4 +1,35 @@
-input test
+<div class="form-control">
+  <div class="p-grid">
+    <div class="p-col">
+      <label for="" class="label">{{ label }}</label>
+    </div>
+    <div class="p-col" *ngIf="labelPosition === 'left'">
+      <input
+        class="input"
+        [id]="id"
+        [attr.type]="type"
+        pInputText
+        (input)="updateValue(inp.value)"
+        [attr.min]="min"
+        [attr.max]="max"
+        [attr.pattern]="pattern"
+        [(ngModel)]="value"
+        [attr.disabled]="disabled ? '' : null"
+        [ngClass]="classes"
+        [ngStyle]="style"
+        [attr.placeholder]="placeholder"
+        (input)="this.onInput.emit(inp.value)"
+        #inp
+      />
+    </div>
+  </div>
+  <div class="p-grid" *ngIf="labelPosition === 'top'">
+    <div class="p-col">
+      <input class="input" />
+    </div>
+  </div>
+</div>
+
 <!-- <div
   [className]="
     labelPosition == 'left' ? 'inputBox input_row' : 'inputBox input_col'
@@ -44,4 +75,3 @@ input test
 </div> -->
 
 <!-- {{ control?.errors | formErrorPipe: 'inputText' }} -->
-<input />
