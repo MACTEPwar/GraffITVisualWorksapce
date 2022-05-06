@@ -18,10 +18,10 @@
   "description": "A visual library",
   "peerDependencies": {
     "@angular/common": "^12.1.0",
-    "@angular/core": "^12.1.0",
-    "primeng": "^12.2.0-rc.1"
+    "@angular/core": "^12.1.0"
   },
   "dependencies": {
-    "tslib": "^2.2.0"
+    "tslib": "^2.2.0",
+    "ngx-md": "^12.0.5"
   }
 }

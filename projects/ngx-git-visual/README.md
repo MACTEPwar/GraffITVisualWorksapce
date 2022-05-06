@@ -22,3 +22,7 @@ Run `ng test NgxGitVisual` to execute the unit tests via [Karma](https://karma-r
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+npm i ngx-highlightjs
+нужен для компонента `ngx-git-code`
