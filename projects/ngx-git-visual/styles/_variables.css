@@ -1,15 +1,21 @@
 :root {
+  /* common */
+  --font-size: 14px;
   /* .form-control */
   --form-control_color: #484848;
   --form-control_height: 30px;
   --form-control_border: 1px solid #c8c8c8;
-  --form-control_padding: 0.5rem;
-  --form-control_border-radius: 0.3rem;
+  --form-control_padding: 8px;
+  --form-control_border-radius: 5px;
   /* .form-control .label */
-  --form-control-label__font-size: 1.25rem;
+  --form-control-label__font-size: 1.15rem;
   --form-control-label__color: var(--form-control_color);
   /* .form-control .input */
   --form-control-input__color: var(--form-control_color);
   --form-control-input__padding: var(--form-control_padding);
   --form-control-input__font-size: 1rem;
+}
+
+html {
+  font-size: var(--font-size);
 }
