@@ -2,10 +2,7 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/ngx-git-visual",
   "lib": {
-    "entryFile": "src/public-api.ts",
-    "umdModuleIds": {
-      "ngx-md": "ngx-md"
-    }
+    "entryFile": "src/public-api.ts"
   },
   "assets": ["styles/_variables.css"]
 }

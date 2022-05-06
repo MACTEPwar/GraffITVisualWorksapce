@@ -21,7 +21,6 @@
     "@angular/core": "^12.1.0"
   },
   "dependencies": {
-    "tslib": "^2.2.0",
-    "ngx-md": "^12.0.5"
+    "tslib": "^2.2.0"
   }
 }
