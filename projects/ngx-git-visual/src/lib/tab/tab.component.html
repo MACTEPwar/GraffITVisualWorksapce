@@ -1,0 +1,23 @@
+<div>
+  <ul #navbar class="p-tabview-nav" role="tablist">
+    <ng-container *ngFor="let tab of tabs">
+      <li role="presentation" (click)="open($event, tab)">
+        <a>
+          <ng-container *ngIf="!tab.headerTemplate">
+            <span class="tab-item-left-icon" *ngIf="tab.leftIcon"></span>
+            <span class="tab-item-title">{{ tab.header }}</span>
+            <span class="tab-item-right-icon" *ngIf="tab.rightIcon"></span>
+          </ng-container>
+          <ng-container *ngTemplateOutlet="tab.headerTemplate"></ng-container>
+          <span
+            *ngIf="tab.closable"
+            class="p-tabview-close pi pi-times"
+            (click)="close($event, tab)"
+          ></span>
+        </a>
+      </li>
+      a
+    </ng-container>
+  </ul>
+  <ng-content></ng-content>
+</div>

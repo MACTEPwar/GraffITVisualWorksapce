@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/ngx-git-visual",
       "sourceRoot": "projects/ngx-git-visual/src",
-      "prefix": "NgxGit",
+      "prefix": "ngx-git",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
