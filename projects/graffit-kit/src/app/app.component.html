@@ -17,13 +17,9 @@
   <div class="p-col-10 h-100">
     <div class="p-grid">
       <!-- <router-outlet></router-outlet> -->
-      <!-- <ngx-md
-        #main
-        (loaded)="onLoad()"
-        [path]="
-          'https://raw.githubusercontent.com/dimpu/ngx-md/master/README.md'
-        "
-      ></ngx-md> -->
+      <pre class="language-{{ language }}">
+        <code #codeEle class="language-{{ language }}">{{code}}</code>
+      </pre>
     </div>
   </div>
 </div>

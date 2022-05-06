@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import 'prismjs/components/prism-javascript';
-import 'prismjs/components/pr';
+// import 'prismjs/components/prism-javascript';
+// import 'prismjs/components/pr';
 
 @Component({
   selector: 'ngx-git-code',
