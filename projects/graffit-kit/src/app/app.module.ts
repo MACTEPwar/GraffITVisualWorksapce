@@ -5,9 +5,6 @@ import { AccordionModule } from 'primeng/accordion';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import 'prismjs/prism';
-import 'prismjs/components/prism-typescript';
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
