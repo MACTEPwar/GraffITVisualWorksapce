@@ -6,6 +6,7 @@ import { InputComponent } from './input.component';
 
 import { InputModule as NgxInputModule, CodeModule } from 'NgxGitVisual';
 
+
 @NgModule({
   declarations: [InputComponent],
   imports: [CommonModule, InputRoutingModule, NgxInputModule, CodeModule],

@@ -7,5 +7,6 @@ export const menu: Array<MenuItem> = [
   ]),
   new MenuItem('Работа с формами', null, [
     new MenuItem('Input', ['/input']),
+    new MenuItem('Tabs', ['/tab']),
   ]),
 ];

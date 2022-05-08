@@ -26,6 +26,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./input/input.module').then((m) => m.InputModule),
   },
+  {
+    path: 'tab',
+    loadChildren: () =>
+      import('./tab/tab.module').then((m) => m.TabModule),
+  },
   //** falied route
   {
     path: '**',
