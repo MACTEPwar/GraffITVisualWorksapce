@@ -1,22 +1,29 @@
-<div>
-  <ul #navbar class="p-tabview-nav" role="tablist">
-    <ng-container *ngFor="let tab of tabs">
-      <li role="presentation" (click)="open($event, tab)">
-        <a>
-          <ng-container *ngIf="!tab.headerTemplate">
-            <span class="tab-item-left-icon" *ngIf="tab.leftIcon"></span>
-            <span class="tab-item-title">{{ tab.header }}</span>
-            <span class="tab-item-right-icon" *ngIf="tab.rightIcon"></span>
-          </ng-container>
-          <ng-container *ngTemplateOutlet="tab.headerTemplate"></ng-container>
-          <span
-            *ngIf="tab.closable"
-            class="p-tabview-close pi pi-times"
-            (click)="close($event, tab)"
-          ></span>
-        </a>
-      </li>
-    </ng-container>
-  </ul>
-  <ng-content></ng-content>
+<ul #navbar class="g-tab-nav" role="tablist">
+  <ng-container *ngFor="let tab of tabs">
+    <li
+      [title]="tab.header"
+      class="g-tab-nav-item"
+      role="presentation"
+      (click)="open($event, tab)"
+    >
+      <ng-container *ngIf="!tab.headerTemplate">
+        <span class="tab-item-left-icon" *ngIf="tab.leftIcon"></span>
+        <span class="tab-item-title">{{ tab.header }}</span>
+        <span class="tab-item-right-icon" *ngIf="tab.rightIcon"></span>
+      </ng-container>
+      <ng-container *ngTemplateOutlet="tab.headerTemplate"></ng-container>
+      <!-- <span
+              *ngIf="tab.closable"
+              class="p-tabview-close"
+              (click)="close($event, tab)"
+            ></span> -->
+    </li>
+  </ng-container>
+</ul>
+<div class="g-tab-content">
+  <div class="p-grid">
+    <div class="p-col">
+      <ng-content></ng-content>
+    </div>
+  </div>
 </div>

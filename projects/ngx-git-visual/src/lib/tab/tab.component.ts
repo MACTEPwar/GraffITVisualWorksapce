@@ -10,7 +10,10 @@ import { TabItemComponent } from './tab-item/tab-item.component';
 @Component({
   selector: 'ngx-git-tab',
   templateUrl: './tab.component.html',
-  styleUrls: ['./tab.component.css'],
+  styleUrls: ['./tab.component.scss'],
+  host: {
+    class: 'g-element',
+  },
 })
 export class TabComponent implements OnInit {
   @ContentChildren(TabItemComponent) tabItems: QueryList<TabItemComponent> =

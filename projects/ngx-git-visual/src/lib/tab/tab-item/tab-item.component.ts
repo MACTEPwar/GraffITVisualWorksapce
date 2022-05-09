@@ -3,7 +3,7 @@ import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 @Component({
   selector: 'ngx-git-tab-item',
   templateUrl: './tab-item.component.html',
-  styleUrls: ['./tab-item.component.css'],
+  styleUrls: ['./tab-item.component.scss'],
 })
 export class TabItemComponent implements OnInit {
   @Input() headerTemplate: TemplateRef<any> | null = null;
