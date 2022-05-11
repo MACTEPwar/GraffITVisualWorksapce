@@ -8,33 +8,37 @@
   margin: 0;
   .g-tab-nav-item {
     display: inline-block;
-    padding: 4px 8px;
-    color: blue;
-    background: red;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    margin-left: 3.5px;
-    border-top-left-radius: 5px 5px;
-    border-top-right-radius: 5px 5px;
-    min-width: 80px;
-    max-width: 80px;
+    padding: var(--element-padding);
+    color: var(--tab-item__color);
+    background: var(--tab-item__background);
+    border-top: var(--tab-item__border-top);
+    border-left: var(--tab-item__border-left);
+    border-right: var(--tab-item__border-right);
+    margin-left: var(--tab-item__margin-left);
+    border-top-left-radius: var(--tab-item__border-top-left-radius);
+    border-top-right-radius: var(--tab-item__border-top-right-radius);
+    min-width: var(--tab-item__min-width);
+    max-width: var(--tab-item__max-width);
     cursor: pointer;
+    &:hover {
+      color: var(--tab-item__color__hover);
+      background: var(--tab-item__background__hover);
+    }
     .tab-item-title {
-        display: block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: pre;
-      }
+      display: block;
+      overflow: var(--tab-item-title__overflow);
+      text-overflow: var(--tab-item-title__text-overflow);
+      white-space: var(--tab-item-title__white-space);
+    }
   }
 }
 
 .g-tab-content {
-  border: 1px solid black;
-  background: #9c9c9f;
-  color: white;
-  border-top-left-radius: 5px 5px;
-  border-top-right-radius: 5px 5px;
-  border-bottom-left-radius: 5px 5px;
-  border-bottom-right-radius: 5px 5px;
+  border: var(--tab-content__border);
+  background: var(--tab-content__background);
+  color: var(--tab-content__color);
+  border-top-left-radius: var(--tab-content__border-top-left-radius);
+  border-top-right-radius: var(--tab-content__border-top-right-radius);
+  border-bottom-left-radius: var(--tab-content__border-bottom-left-radius);
+  border-bottom-right-radius: var(--tab-content__border-bottom-right-radius);
 }

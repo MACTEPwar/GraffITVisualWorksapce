@@ -1,12 +1,16 @@
 :root {
   /* common */
   --font-size: 14px;
+  --element-padding: 4px 8px;
+  --content-color: #484848;
+
   /* .form-control */
-  --form-control_color: #484848;
+  --form-control_color: var(--content-color);
   --form-control_height: 30px;
   --form-control_border: 1px solid #c8c8c8;
   --form-control_padding: 8px;
   --form-control_border-radius: 5px;
+  
   /* .form-control .label */
   --form-control-label__font-size: 1.15rem;
   --form-control-label__color: var(--form-control_color);
@@ -14,6 +18,34 @@
   --form-control-input__color: var(--form-control_color);
   --form-control-input__padding: var(--form-control_padding);
   --form-control-input__font-size: 1rem;
+
+  /* TAB */
+  --tab-item__color: blue;
+  --tab-item__background: red;
+  --tab-item__border: 1px solid black;
+  --tab-item__border-top: var(--tab-item__border);
+  --tab-item__border-left: var(--tab-item__border);
+  --tab-item__border-right: var(--tab-item__border);
+  --tab-item__brder-top-radius: 5px 5px;
+  --tab-item__border-top-left-radius: var(--tab-item__brder-top-radius);
+  --tab-item__border-top-right-radius: var(--tab-item__brder-top-radius);
+  --tab-item__margin-left: 3.5px;
+  --tab-item__min-width: 80px;
+  --tab-item__max-width: 80px;
+  --tab-item__color__hover: blue;
+  --tab-item__background__hover: red;
+  --tab-item-title__overflow: hidden;
+  --tab-item-title__text-overflow: ellipsis;
+  --tab-item-title__white-space: pre;
+
+  --tab-content__border: 1px solid black;
+  --tab-content__background: #9c9c9f;
+  --tab-content__color: var(--content-color);
+  --tab-content__border-radius: 5px 5px;
+  --tab-content__border-top-left-radius: var(--tab-content__border-radius);
+  --tab-content__border-top-right-radius: var(--tab-content__border-radius);
+  --tab-content__border-bottom-left-radius: var(--tab-content__border-radius);
+  --tab-content__border-bottom-right-radius: var(--tab-content__border-radius);
 }
 
 html {
