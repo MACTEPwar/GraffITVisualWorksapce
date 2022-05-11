@@ -1,10 +1,49 @@
-<ngx-git-tab>
-  <ngx-git-tab-item [headerTemplate]="header">
-    <ng-template #header>
-      <div style="overflow: hidden;">TTT</div>
-    </ng-template>
-    Вкладка 1
-  </ngx-git-tab-item>
-  <ngx-git-tab-item header="22fgg hasjf gsdfgh sdfg">Таб 2</ngx-git-tab-item>
-  <ngx-git-tab-item header="33">Таб 3</ngx-git-tab-item>
-</ngx-git-tab>
+<div class="p-grid">
+  <div class="p-col">
+    <ngx-git-tab>
+      <ngx-git-tab-item [headerTemplate]="header">
+        <ng-template #header>
+          <div style="overflow: hidden">TTT</div>
+        </ng-template>
+        Вкладка 1
+      </ngx-git-tab-item>
+      <ngx-git-tab-item header="22fgg hasjf gsdfgh sdfg"
+        >Таб 2</ngx-git-tab-item
+      >
+      <ngx-git-tab-item header="33">Таб 3</ngx-git-tab-item>
+    </ngx-git-tab>
+  </div>
+</div>
+<div class="p-grid">
+  <div class="p-col">
+    <table>
+      <thead>
+        <tr>
+          <th>Описание</th>
+          <th>Переменная</th>
+          <th>Тег</th>
+          <th>Значение</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of variablesStyle">
+          <td>{{ item.description }}</td>
+          <td>
+            <code>{{ item.variableName }}</code>
+          </td>
+          <td>
+            <code *ngFor="let tag of item.tags">{{tag}}</code>
+          </td>
+          <td>      
+            <input
+              [type]="item.type"
+              (input)="onChangeProperty(inp.value, item)"
+              [(ngModel)]="item.defaultValue"
+              #inp
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

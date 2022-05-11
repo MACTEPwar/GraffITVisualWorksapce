@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { TabComponent } from './tab.component';
 import { TabRoutingModule } from './tab-routing.module';
 import { TabModule as NgxTabModule } from 'NgxGitVisual';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [TabComponent],
-  imports: [CommonModule, TabRoutingModule, NgxTabModule],
+  imports: [CommonModule, FormsModule, TabRoutingModule, NgxTabModule],
 })
 export class TabModule {}

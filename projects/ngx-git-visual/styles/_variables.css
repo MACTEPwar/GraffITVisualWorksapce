@@ -20,8 +20,8 @@
   --form-control-input__font-size: 1rem;
 
   /* TAB */
-  --tab-item__color: blue;
-  --tab-item__background: red;
+  --tab-item__color: #0000ff;
+  --tab-item__background: #ff0000;
   --tab-item__border: 1px solid black;
   --tab-item__border-top: var(--tab-item__border);
   --tab-item__border-left: var(--tab-item__border);
@@ -32,8 +32,8 @@
   --tab-item__margin-left: 3.5px;
   --tab-item__min-width: 80px;
   --tab-item__max-width: 80px;
-  --tab-item__color__hover: blue;
-  --tab-item__background__hover: red;
+  --tab-item__color__hover: #0000ff;
+  --tab-item__background__hover: #ff0000;
   --tab-item-title__overflow: hidden;
   --tab-item-title__text-overflow: ellipsis;
   --tab-item-title__white-space: pre;
