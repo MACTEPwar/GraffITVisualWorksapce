@@ -120,14 +120,54 @@ export const VARIABLES_STYLE = [
   },
   {
     variableName: '--tab-item__color__hover',
-    description: 'Цвет текста',
+    description: 'Цвет для текста таба',
     tags: ['hover'],
     type: 'color',
   },
   {
     variableName: '--tab-item__background__hover',
-    description: 'Цвет фона',
+    description: 'Цвет для фона таба',
     tags: ['hover'],
     type: 'color',
+  },
+  {
+    variableName: '--tab-content__border',
+    description: 'Граница для контента',
+    type: 'text',
+  },
+  {
+    variableName: '--tab-content__background',
+    description: 'Цвет для фона контента',
+    type: 'color',
+  },
+  {
+    variableName: '--tab-content__color',
+    description: 'Цвет для текста контента',
+    type: 'color',
+  },
+  {
+    variableName: '--tab-content__border-radius',
+    description: 'Закругление контента',
+    type: 'text',
+  },
+  {
+    variableName: '--tab-content__border-top-left-radius',
+    description: 'Закругление контента сверху слева',
+    type: 'text',
+  },
+  {
+    variableName: '--tab-content__border-top-right-radius',
+    description: 'Закругление контента сверху справа',
+    type: 'text',
+  },
+  {
+    variableName: '--tab-content__border-bottom-left-radius',
+    description: 'Закругление контента снизу слева',
+    type: 'text',
+  },
+  {
+    variableName: '--tab-content__border-bottom-right-radius',
+    description: 'Закругление контента снизу справа',
+    type: 'text',
   },
 ];

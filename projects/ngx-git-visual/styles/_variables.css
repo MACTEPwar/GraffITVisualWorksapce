@@ -20,9 +20,9 @@
   --form-control-input__font-size: 1rem;
 
   /* TAB */
-  --tab-item__color: #0000ff;
-  --tab-item__background: #ff0000;
-  --tab-item__border: 1px solid black;
+  --tab-item__color: var(--content-color);
+  --tab-item__background: #eaeaea;
+  --tab-item__border: 1px solid #d0d0d0;
   --tab-item__border-top: var(--tab-item__border);
   --tab-item__border-left: var(--tab-item__border);
   --tab-item__border-right: var(--tab-item__border);
@@ -32,14 +32,14 @@
   --tab-item__margin-left: 3.5px;
   --tab-item__min-width: 80px;
   --tab-item__max-width: 80px;
-  --tab-item__color__hover: #0000ff;
-  --tab-item__background__hover: #ff0000;
+  --tab-item__color__hover: var(--content-color);
+  --tab-item__background__hover: #a4a4a4;
   --tab-item-title__overflow: hidden;
   --tab-item-title__text-overflow: ellipsis;
   --tab-item-title__white-space: pre;
 
-  --tab-content__border: 1px solid black;
-  --tab-content__background: #9c9c9f;
+  --tab-content__border: 1px solid #d0d0d0;
+  --tab-content__background: #eaeaea;
   --tab-content__color: var(--content-color);
   --tab-content__border-radius: 5px 5px;
   --tab-content__border-top-left-radius: var(--tab-content__border-radius);
