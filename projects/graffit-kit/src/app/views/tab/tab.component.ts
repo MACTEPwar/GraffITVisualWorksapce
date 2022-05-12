@@ -6,8 +6,36 @@ import { Component, HostBinding, OnInit, ElementRef } from '@angular/core';
   styleUrls: ['./tab.component.scss'],
 })
 export class TabComponent implements OnInit {
-  @HostBinding('style.--tab-item__color') tabColor = null;
   variablesStyle: any[] = [];
+
+  code = `
+  <ngx-git-tab>
+    <ngx-git-tab-item [headerTemplate]="header">
+      <ng-template #header>
+        <div
+          style="
+            overflow: var(--tab-item-title__overflow);
+            text-overflow: var(--tab-item-title__text-overflow);
+            white-space: var(--tab-item-title__white-space);
+          "
+        >
+          Название таба 1
+        </div>
+      </ng-template>
+      <div class="p-grid">
+        <div class="p-col">Контент таба 1</div>
+      </div>
+    </ngx-git-tab-item>
+    <ngx-git-tab-item header="Название таба 2"
+      ><div class="p-grid">
+        <div class="p-col">Контент таба 2</div>
+      </div></ngx-git-tab-item>
+    <ngx-git-tab-item header="Название таба 3"
+      ><div class="p-grid">
+        <div class="p-col">Контент таба 3</div>
+      </div></ngx-git-tab-item>
+  </ngx-git-tab>
+  `;
 
   constructor(private el: ElementRef) {}
 
@@ -18,11 +46,6 @@ export class TabComponent implements OnInit {
       m.defaultValue = style.getPropertyValue(m.variableName);
       return m;
     });
-  }
-
-  ngAfterContentInit() {
-    // document.documentElement.style.setProperty('--tab-item__color', 'green');
-    // this.el.nativeElement.style.setProperty('--tab-item__color', 'green')
   }
 
   onChangeProperty(incomingValue: string, item: any): void {
@@ -38,73 +61,73 @@ export const VARIABLES_STYLE = [
   {
     variableName: '--tab-item__color',
     description: 'Цвет для текста таба',
-    type: 'color'
+    type: 'color',
   },
   {
     variableName: '--tab-item__background',
     description: 'Цвет для фона таба',
-    type: 'color'
+    type: 'color',
   },
   {
     variableName: '--tab-item__border',
     description: 'Граница',
-    type: 'text'
+    type: 'text',
   },
   {
     variableName: '--tab-item__border-top',
     description: 'Граница вверхняя',
-    type: 'text'
+    type: 'text',
   },
   {
     variableName: '--tab-item__border-right',
     description: 'Граница правая',
-    type: 'text'
+    type: 'text',
   },
   {
     variableName: '--tab-item__border-left',
     description: 'Граница левая',
-    type: 'text'
+    type: 'text',
   },
   {
     variableName: '--tab-item__brder-top-radius',
     description: 'Закругление сверху',
-    type: 'text'
+    type: 'text',
   },
   {
     variableName: '--tab-item__border-top-left-radius',
     description: 'Закругление сверху слева',
-    type: 'text'
+    type: 'text',
   },
   {
     variableName: '--tab-item__border-top-right-radius',
     description: 'Закругление сверху справа',
-    type: 'text'
+    type: 'text',
   },
   {
     variableName: '--tab-item__margin-left',
     description: 'Отсуп слева',
-    type: 'text'
+    type: 'text',
   },
   {
     variableName: '--tab-item__min-width',
     description: 'Минимальная длинна',
-    type: 'text'
+    type: 'text',
   },
   {
     variableName: '--tab-item__max-width',
     description: 'Максимальная длинна',
-    type: 'text'
+    type: 'text',
   },
   {
     variableName: '--tab-item__color__hover',
     description: 'Цвет текста',
     tags: ['hover'],
-    type: 'color'
+    type: 'color',
   },
   {
     variableName: '--tab-item__background__hover',
     description: 'Цвет фона',
     tags: ['hover'],
-    type: 'color'
+    type: 'color',
   },
 ];

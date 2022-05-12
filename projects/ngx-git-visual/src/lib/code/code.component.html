@@ -1,3 +1,4 @@
-<pre class="language-{{ language }}">
-    <code #codeEle class="language-{{ language }}">{{code}}</code>
-  </pre>
+<pre
+  [classList]="classes"
+  class="language-{{ language }}"
+><code #codeEle class="language-{{ language }}">{{code}}</code></pre>

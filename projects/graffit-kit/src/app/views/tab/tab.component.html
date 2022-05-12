@@ -3,47 +3,268 @@
     <ngx-git-tab>
       <ngx-git-tab-item [headerTemplate]="header">
         <ng-template #header>
-          <div style="overflow: hidden">TTT</div>
+          <div
+            style="
+              overflow: var(--tab-item-title__overflow);
+              text-overflow: var(--tab-item-title__text-overflow);
+              white-space: var(--tab-item-title__white-space);
+            "
+          >
+            Название таба 1
+          </div>
         </ng-template>
-        Вкладка 1
+        <div class="p-grid">
+          <div class="p-col">Контент таба 1</div>
+        </div>
       </ngx-git-tab-item>
-      <ngx-git-tab-item header="22fgg hasjf gsdfgh sdfg"
-        >Таб 2</ngx-git-tab-item
+      <ngx-git-tab-item header="Название таба 2"
+        ><div class="p-grid">
+          <div class="p-col">Контент таба 2</div>
+        </div></ngx-git-tab-item
       >
-      <ngx-git-tab-item header="33">Таб 3</ngx-git-tab-item>
+      <ngx-git-tab-item header="Название таба 3"
+        ><div class="p-grid">
+          <div class="p-col">Контент таба 3</div>
+        </div></ngx-git-tab-item
+      >
     </ngx-git-tab>
   </div>
 </div>
+
 <div class="p-grid">
   <div class="p-col">
-    <table>
-      <thead>
-        <tr>
-          <th>Описание</th>
-          <th>Переменная</th>
-          <th>Тег</th>
-          <th>Значение</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of variablesStyle">
-          <td>{{ item.description }}</td>
-          <td>
-            <code>{{ item.variableName }}</code>
-          </td>
-          <td>
-            <code *ngFor="let tag of item.tags">{{tag}}</code>
-          </td>
-          <td>      
-            <input
-              [type]="item.type"
-              (input)="onChangeProperty(inp.value, item)"
-              [(ngModel)]="item.defaultValue"
-              #inp
-            />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <ngx-git-tab>
+      <ngx-git-tab-item header="Описание">
+        <div class="p-grid">
+          <div class="p-col">
+            <h3>Подключение</h3>
+            <p>
+              <ngx-git-code
+                [classes]="'badge'"
+                code="import { TabModule } from 'NgxGitVisual';"
+                language="typescript"
+              ></ngx-git-code>
+            </p>
+            <h3>Описание</h3>
+            <p>
+              Тег
+              <ngx-git-code
+                [classes]="'badge'"
+                code="&lsaquo;ngx-git-tab&rsaquo;&lsaquo;&frasl;ngx-git-tab&rsaquo;"
+                language="html"
+              ></ngx-git-code>
+              определяет настройки для всего элемента таба
+            </p>
+            <p>
+              Тег
+              <ngx-git-code
+                [classes]="'badge'"
+                code="&lsaquo;ngx-git-tab-item&rsaquo;&lsaquo;&frasl;ngx-git-tab-item&rsaquo;"
+                language="html"
+              ></ngx-git-code>
+              определяет настройки для одного контента таба
+            </p>
+            <!-- <h3>Переменные для ngx-git-tab</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Переменная</th>
+                  <th>Описание</th>
+                  <th>Значение по умолчанию</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table> -->
+            <h3>Переменные для ngx-git-tab-item</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Описание</th>
+                  <th>Переменная</th>
+                  <th>Тип</th>
+                  <th>Значение по умолчанию</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Шаблон для хедера</td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="headerTemplate"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="TemplateRef&lsaquo;any&rsaquo; | null"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="null"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Иконка слева шапки</td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="leftIcon"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                  <td></td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="null"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Иконка справа шапки</td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="rightIcon"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                  <td></td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="null"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Текст шапки</td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="header"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                  <td></td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="''"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Можно закрыть?</td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="closable"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="boolean"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="false"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Выбран?</td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="selected"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="boolean"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                  <td>
+                    <ngx-git-code
+                      [classes]="'badge'"
+                      code="false"
+                      language="typescript"
+                    ></ngx-git-code>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </ngx-git-tab-item>
+      <ngx-git-tab-item header="Пример кода">
+        <div class="p-grid">
+          <div class="p-col">
+            <ngx-git-code [code]="code" language="html"></ngx-git-code>
+          </div>
+        </div>
+      </ngx-git-tab-item>
+      <ngx-git-tab-item header="CSS переменные">
+        <div class="p-grid">
+          <div class="p-col">
+            <table>
+              <thead>
+                <tr>
+                  <th>Описание</th>
+                  <th>Переменная</th>
+                  <th>Тег</th>
+                  <th>Значение</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of variablesStyle">
+                  <td>{{ item.description }}</td>
+                  <td>
+                    <code>{{ item.variableName }}</code>
+                  </td>
+                  <td>
+                    <code *ngFor="let tag of item.tags">{{ tag }}</code>
+                  </td>
+                  <td>
+                    <input
+                      [type]="item.type"
+                      (input)="onChangeProperty(inp.value, item)"
+                      [(ngModel)]="item.defaultValue"
+                      #inp
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </ngx-git-tab-item>
+    </ngx-git-tab>
   </div>
 </div>

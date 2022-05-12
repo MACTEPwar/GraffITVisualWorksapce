@@ -5,12 +5,13 @@ import * as Prism from 'prismjs';
 @Component({
   selector: 'ngx-git-code',
   templateUrl: './code.component.html',
-  styleUrls: ['./code.component.css'],
+  styleUrls: ['./code.component.scss'],
 })
 export class CodeComponent {
   @ViewChild('codeEle') codeEle!: ElementRef;
   @Input() code?: string;
   @Input() language?: 'html' | 'css' | 'typescript' | 'text' = 'text';
+  @Input() classes: string = ''
 
   constructor() {}
   ngAfterViewInit() {
