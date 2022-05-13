@@ -12,13 +12,7 @@ export class TabComponent implements OnInit {
   <ngx-git-tab>
     <ngx-git-tab-item [headerTemplate]="header">
       <ng-template #header>
-        <div
-          style="
-            overflow: var(--tab-item-title__overflow);
-            text-overflow: var(--tab-item-title__text-overflow);
-            white-space: var(--tab-item-title__white-space);
-          "
-        >
+        <div class="g-tab-custom-title">
           Название таба 1
         </div>
       </ng-template>
