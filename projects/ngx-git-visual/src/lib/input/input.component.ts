@@ -7,6 +7,7 @@ import {
   Input,
   OnInit,
   Output,
+  ViewEncapsulation,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { BaseUiFormDirective } from '../base-classes/a-base-component';
@@ -22,6 +23,10 @@ import { BaseUiFormDirective } from '../base-classes/a-base-component';
       useExisting: forwardRef(() => InputComponent),
     },
   ],
+  encapsulation: ViewEncapsulation.None,
+  host: {
+    class: 'g-element form-control',
+  },
 })
 export class InputComponent
   extends BaseUiFormDirective

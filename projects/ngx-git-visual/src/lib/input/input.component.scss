@@ -2,12 +2,11 @@
   width: 100%;
 }
 
-.p-grid {
-  padding: 4px 8px;
-}
-
 .form-control {
   color: var(--form-control_color);
+  .input-padding {
+    padding: 0px;
+  }
   .label {
     font-size: var(--form-control-label__font-size);
     color: var(--form-control-label__color);
