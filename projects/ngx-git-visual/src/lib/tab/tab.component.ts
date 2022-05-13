@@ -4,6 +4,7 @@ import {
   ContentChildren,
   OnInit,
   QueryList,
+  ViewEncapsulation,
 } from '@angular/core';
 import { TabItemComponent } from './tab-item/tab-item.component';
 
@@ -14,6 +15,7 @@ import { TabItemComponent } from './tab-item/tab-item.component';
   host: {
     class: 'g-element',
   },
+  encapsulation: ViewEncapsulation.None,
 })
 export class TabComponent implements OnInit {
   @ContentChildren(TabItemComponent) tabItems: QueryList<TabItemComponent> =

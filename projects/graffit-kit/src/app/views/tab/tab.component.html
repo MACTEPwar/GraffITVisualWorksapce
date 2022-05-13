@@ -8,9 +8,7 @@
     <ngx-git-tab>
       <ngx-git-tab-item [headerTemplate]="header">
         <ng-template #header>
-          <div class="g-tab-custom-title">
-            Название таба 1
-          </div>
+          <div class="g-tab-item-title">Название таба 1</div>
         </ng-template>
         <div class="p-grid">
           <div class="p-col">Контент таба 1</div>
@@ -261,6 +259,16 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </ngx-git-tab-item>
+      <ngx-git-tab-item header="CSS селекторы">
+        <div class="p-grid">
+          <div class="p-col">
+            <ngx-git-code
+              [code]="cssVariable"
+              language="css"
+            ></ngx-git-code>
           </div>
         </div>
       </ngx-git-tab-item>

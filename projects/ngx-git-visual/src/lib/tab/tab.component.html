@@ -8,9 +8,9 @@
       [ngClass]="{ selected: tab.selected }"
     >
       <ng-container *ngIf="!tab.headerTemplate">
-        <span class="tab-item-left-icon" *ngIf="tab.leftIcon"></span>
-        <span class="tab-item-title">{{ tab.header }}</span>
-        <span class="tab-item-right-icon" *ngIf="tab.rightIcon"></span>
+        <span class="g-tab-item-left-icon" *ngIf="tab.leftIcon"></span>
+        <span class="g-tab-item-title">{{ tab.header }}</span>
+        <span class="g-tab-item-right-icon" *ngIf="tab.rightIcon"></span>
       </ng-container>
       <ng-container *ngTemplateOutlet="tab.headerTemplate"></ng-container>
       <!-- <span

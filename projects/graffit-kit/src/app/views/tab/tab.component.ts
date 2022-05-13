@@ -31,6 +31,13 @@ export class TabComponent implements OnInit {
   </ngx-git-tab>
   `;
 
+  cssVariable = `
+    .g-tab-nav
+      .g-tab-nav-item
+        .g-tab-item-title
+    .g-tab-content-container
+  `;
+
   constructor(private el: ElementRef) {}
 
   ngOnInit(): void {
