@@ -5,6 +5,7 @@
       class="g-tab-nav-item"
       role="presentation"
       (click)="open($event, tab)"
+      [ngClass]="{ selected: tab.selected }"
     >
       <ng-container *ngIf="!tab.headerTemplate">
         <span class="tab-item-left-icon" *ngIf="tab.leftIcon"></span>

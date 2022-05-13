@@ -59,6 +59,16 @@ export class TabComponent implements OnInit {
 
 export const VARIABLES_STYLE = [
   {
+    variableName: '--tab-item__color__selected',
+    description: 'Цвет текста выбранного таба',
+    type: 'color',
+  },
+  {
+    variableName: '--tab-item__background__selected',
+    description: 'Цвет фона выбранного таба',
+    type: 'color',
+  },
+  {
     variableName: '--tab-item__color',
     description: 'Цвет для текста таба',
     type: 'color',

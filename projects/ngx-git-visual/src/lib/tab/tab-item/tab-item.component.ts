@@ -1,4 +1,8 @@
-import { Component, Input, OnInit, TemplateRef } from '@angular/core';
+import {
+  Component, Input,
+  OnInit,
+  TemplateRef
+} from '@angular/core';
 
 @Component({
   selector: 'ngx-git-tab-item',

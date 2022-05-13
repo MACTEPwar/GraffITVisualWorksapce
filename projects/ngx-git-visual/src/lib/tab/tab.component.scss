@@ -2,6 +2,12 @@
   width: 100%;
 }
 
+:host ::ng-deep .g-tab-custom-title {
+  overflow: var(--tab-item-title__overflow);
+  text-overflow: var(--tab-item-title__text-overflow);
+  white-space: var(--tab-item-title__white-space);
+}
+
 .g-tab-nav {
   display: block;
   padding: 0;
@@ -23,6 +29,10 @@
     &:hover {
       color: var(--tab-item__color__hover);
       background: var(--tab-item__background__hover);
+    }
+    &.selected {
+      color: var(--tab-item__color__selected);
+      background: var(--tab-item__background__selected);
     }
     .tab-item-title {
       display: block;
